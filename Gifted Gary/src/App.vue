@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   
+    <HelloWorld/>
+    <!-- <REmail /> -->
+    <!-- <CheckoutEmail btntext="xyz" /> -->
+    <!-- <ConfirmEmail/> --> 
+
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+// import ConfirmEmail from './components/ConfirmEmail.vue'
+// import CheckoutEmail from './components/CheckoutEmail.vue'
+// import REmail from './components/REmail.vue'
 
 export default {
   name: 'App',
@@ -17,6 +24,8 @@ export default {
 </script>
 
 <style>
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
