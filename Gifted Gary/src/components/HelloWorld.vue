@@ -1,153 +1,193 @@
+
+
 <template>
   <div class="hello">
     <template>
       <b-container>
         <b-row>
-          <b-col md="8 mx-auto">
-            <!-- <div>
-  <b-button v-b-modal.modal-center>Click Here</b-button>
-
-  <b-modal id="modal-center" centered title=""> -->
-  
- 
-            <b-card>
-              <form @submit="onSubmitonshipping"  v-if="show">
-                 <div v-if="step === 1">
-                <b-row>
-                  <b-col md="12">
-                    <h4>Shipping Details</h4>
-                    <br />
-                  </b-col>
-
-                  <b-col md="6">
-                    <b-form-group id="input-group-5">
-                      <b-form-input
-                        id="input-5"
-                        v-model="Shippingform.fname"
-                        required
-                        placeholder="First Name"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-6">
-                      <b-form-input
-                        id="input-6"
-                        v-model="Shippingform.company"
-                        required
-                        placeholder="Company"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-7">
-                      <b-form-input
-                        id="input-7"
-                        v-model="Shippingform.address"
-                        required
-                        placeholder="Address"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-8">
-                      <b-form-input
-                        id="input-8"
-                        v-model="Shippingform.city"
-                        required
-                        placeholder="City"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-9">
-                      <b-form-input
-                        id="input-9"
-                        v-model="Shippingform.country"
-                        required
-                        placeholder="Country"
-                      ></b-form-input>
-                    </b-form-group>
-                  </b-col>
-                  <b-col md="6">
-                    <b-form-group id="input-group-10">
-                      <b-form-input
-                        id="input-10"
-                        v-model="Shippingform.lname"
-                        required
-                        placeholder="Last Name"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-11">
-                      <b-form-input
-                        id="input-11"
-                        v-model="Shippingform.mobnumber"
-                        required
-                        placeholder="Phone Number"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-12">
-                      <b-form-input
-                        id="input-12"
-                        v-model="Shippingform.apartment"
-                        required
-                        placeholder="Apartment, Suit, Etc"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-13">
-                      <b-form-input
-                        id="input-13"
-                        v-model="Shippingform.state"
-                        required
-                        placeholder="State"
-                      ></b-form-input>
-                    </b-form-group>
-
-                    <b-form-group id="input-group-14">
-                      <b-form-input
-                        id="input-14"
-                        v-model="Shippingform.zipcode"
-                        required
-                        placeholder="Zip Code"
-                      ></b-form-input>
-                    </b-form-group>
-                  </b-col>
-                  <b-button type="submit" variant="primary">Submit</b-button>
-                   <button @click.prevent="next()">Next</button>
-                </b-row>
-                 </div>
-               
-                
-                <div v-if="step === 2">
-                <b-card class="mt-3" header="Complate Data">
-      
-              <b-row>
-                <b-col md="12">
-                  <h5>Complate!!!!</h5>
-                  <h6>Your Present will be on the way soon!!</h6>
-                </b-col>
-               
-              </b-row>
-            </b-card>
-             <br>
-                <br>
-             <button @click.prevent="prev()">Previous</button>
-    <button @click.prevent="next()">Next</button>
+         
+          <div v-if="step === 1">
+            <div id="popup5" class="popup1_mn">
+              <div class="popup_block popup5">
+                <span class="close"></span>
+                <ul class="popup_top popup_new">
+                  <div class="pop_inner">
+                    <li class="active">
+                      <span class="circle">
+                        <span class="inner_circle"></span>
+                      </span>
+                      <p>Shipping Details</p>
+                    </li>
+                    <li>
+                      <span class="circle">
+                        <span class="inner_circle"></span>
+                      </span>
+                      <p>Complete!</p>
+                    </li>
+                  </div>
+                </ul>
+                <ul class="popup_content">
+                  <label for="ShippingInformation" class>Shipping Information</label>
+                  <li>
+                    <input
+                      type="text"
+                      id="FirstName"
+                      name="FirstName"
+                      v-model="Shippingform.fname"
+                      placeholder="First Name"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="LastName"
+                      name="LastName"
+                      v-model="Shippingform.lname"
+                      placeholder="Last Name"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="Company"
+                      name="Company"
+                      v-model="Shippingform.company"
+                      placeholder="Company (optional)"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="PhoneNumber"
+                      name="PhoneNumber"
+                      v-model="Shippingform.mobnumber"
+                      placeholder="Phone Number"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="Address"
+                      name="Address"
+                      v-model="Shippingform.address"
+                      placeholder="Address"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="Apartment"
+                      name="Apartment"
+                      v-model="Shippingform.apartment"
+                      placeholder="Apartment, Suite, etc (optional)"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="State"
+                      name="State"
+                      v-model="Shippingform.state"
+                      placeholder="State"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="City"
+                      name="City"
+                      v-model="Shippingform.city"
+                      placeholder="City"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="Country"
+                      name="Country"
+                      v-model="Shippingform.country"
+                      placeholder="Country"
+                    />
+                  </li>
+                  <li>
+                    <input
+                      type="text"
+                      id="ZipCode"
+                      v-model="Shippingform.zipcode"
+                      name="ZipCode"
+                      placeholder="Zip Code"
+                    />
+                  </li>
+                  <li>
+                    <label for="Note" class>Thank You Note</label>
+                    <textarea
+                      rows="2"
+                      id="Message"
+                      name="Message"
+                      placeholder="Write Your Message Here"
+                    ></textarea>
+                  </li>
+                </ul>
+                <div class="common_btn">
+                  <a
+                    class="Complete"
+                    @click="onSubmitonshipping"
+                    @reset="onReset"
+                    href="javaScript:void(0)"
+                  >
+                    <span @click.prevent="next()" @click="onSubmit" @reset="onReset">Complete</span>
+                  </a>
+                  <p>
+                    Powered by
+                    <img src="#" />
+                  </p>
                 </div>
-               
-              </form>
-            </b-card>
-             <!-- </b-modal>
-</div> -->
+              </div>
+            </div>
+          </div>
 
-          
-             
-          </b-col>
+          <div v-if="step === 2">
+            <div id="popup6" class="popup1_mn">
+              <div class="popup_block popup6">
+                <ul class="popup_top popup_new">
+                  <div class="pop_inner">
+                    <li class="active tick">
+                      <span class="circle">
+                        <span class="inner_circle"></span>
+                      </span>
+                      <p>Shipping Details</p>
+                    </li>
+                    <li class="active tick">
+                      <span class="circle">
+                        <span class="inner_circle"></span>
+                      </span>
+                      <p>Complete!</p>
+                    </li>
+                  </div>
+                </ul>
+                <div class="popup_content">
+                  <h1>Complete!</h1>
+                  <p>Your present will be on the way soon!</p>
+                </div>
+                <div class="common_btn">
+                  <a class="close_btn_new" href="javaScript:void(0)">
+                    <span @click.prevent="next()">Close</span>
+                  </a>
+                  <p>
+                    Powered by
+                    <img src="#" />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- </b-modal> -->
+          <!-- </div> -->
         </b-row>
       </b-container>
     </template>
   </div>
 </template>
-
 
     
    
@@ -158,13 +198,22 @@ export default {
 
   data() {
     return {
-      step:1,
+      step: 1,
       emailto: "",
       nameto: "",
       emailfrom: "",
       namefrom: "",
       msgboxall: "",
-
+      firstname: "",
+      lastname: "",
+      comp: "",
+      mobile: "",
+      add: "",
+      apart: "",
+      cityname: "",
+      statename: "",
+      contname: "",
+      zip: "",
 
       Shippingform: {
         fname: "",
@@ -182,21 +231,43 @@ export default {
       show: true,
     };
   },
- 
+
   methods: {
-   
     onSubmitonshipping(evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.Shippingform));
+      // alert(JSON.stringify(this.Shippingform));
+      (this.firstname = this.Shippingform.fname),
+        (this.lastname = this.Shippingform.lname),
+        (this.comp = this.Shippingform.company),
+        (this.mobile = this.Shippingform.mobnumber),
+        (this.add = this.Shippingform.address),
+        (this.apart = this.Shippingform.fnamapartmente),
+        (this.cityname = this.Shippingform.city),
+        (this.statename = this.Shippingform.state),
+        (this.contname = this.Shippingform.country),
+        (this.zip = this.Shippingform.zipcode);
     },
-    
-      prev() {
+    onReset(evt) {
+      evt.preventDefault();
+      // Reset our form values
+      this.form.email = "";
+      this.form.name = "";
+      this.form.yemail = "";
+      this.form.yname = "";
+      this.form.msgbox = "";
+
+      // Trick to reset/clear native browser form validation state
+      this.show = false;
+      this.$nextTick(() => {
+        this.show = true;
+      });
+    },
+    prev() {
       this.step--;
     },
     next() {
       this.step++;
     },
-    
   },
 };
 </script>
