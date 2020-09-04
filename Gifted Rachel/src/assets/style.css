@@ -140,7 +140,7 @@ ul li{
   margin-top: 6px;
 }
 .popup1_mn .popup_block ul.popup_top li {
-  width: 25%;
+  width: 21%;
   float: left;
 }
 .popup1_mn .popup_block ul.popup_top li span.inner_circle:after {
@@ -160,10 +160,10 @@ ul li{
   content: "";
   display: block;
   background: #BBCDEE99;
-  width: 146px;
+  width: 132px;
   height: 4px;
   position: absolute;
-  right: -76px;
+  right: -78px;
   top: 8px;
   left: auto;
 }
