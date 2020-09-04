@@ -2,9 +2,12 @@
 
 <template>
   <div class="hello">
+     <b-button variant="primary" @click="showmod=true">click here</b-button>
     <template>
+     
       <b-container>
         <b-row>
+          
           <!-- <div>
             <b-button v-b-modal.modal-center>Launch centered modal</b-button>
 
@@ -12,7 +15,7 @@
           <!-- <p class="my-4">Vertically centered modal!</p> -->
           <div v-if="step === 1">
             <div id="popup" class="popup1_mn">
-              <div class="popup_block">
+              <div class="popup_block" >
                 <span class="close"></span>
                 <ul class="popup_top">
                   <div class="pop_inner">
@@ -72,7 +75,7 @@
                   </a>
                   <p>
                     Powered by
-                    <img src="#" />
+                    <img src="../assets/images/logo.svg" />
                   </p>
                 </div>
                 <!-- <button>Next</button> -->
@@ -175,7 +178,7 @@
                   </a>
                   <p>
                     Powered by
-                    <img src="#" />
+                     <img src="../assets/images/logo.svg" />
                   </p>
                 </div>
                 <!-- <button >Previous</button> -->
@@ -251,7 +254,7 @@
                   </a>
                   <p>
                     Powered by
-                    <img src="#" />
+                     <img src="../assets/images/logo.svg" />
                   </p>
                 </div>
                 <!-- <button>Previous</button>
@@ -301,7 +304,7 @@
                 </a>
                 <p>
                   Powered by
-                  <img src="" />
+                   <img src="../assets/images/logo.svg" />
                 </p>
               </div>
               
@@ -441,7 +444,7 @@
                 </a>
                 <p>
                   Powered by
-                  <img src="#" />
+                  <img src="../assets/images/logo.svg" />
                 </p>
               </div>
             </div>
@@ -478,7 +481,7 @@
                   </a>
                   <p>
                     Powered by
-                    <img src="#" />
+                   <img src="../assets/images/logo.svg" />
                   </p>
                 </div>
               </div>
@@ -502,6 +505,7 @@ export default {
   data() {
     return {
       step: 1,
+      showmod:false,
       emailto: "",
       nameto: "",
       emailfrom: "",
@@ -578,6 +582,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
    <style scoped src="@/assets/style.css">
+   
 </style>
 
 <style>
