@@ -139,7 +139,7 @@
                   </a>
                   <p>
                     Powered by
-                    <img src="#" />
+                    <img src="../assets/images/logo.svg" />
                   </p>
                 </div>
               </div>
@@ -175,7 +175,7 @@
                   </a>
                   <p>
                     Powered by
-                    <img src="#" />
+                    <img src="../assets/images/logo.svg" />
                   </p>
                 </div>
               </div>
